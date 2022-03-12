@@ -39,3 +39,26 @@ export const Container = styled.div`
   padding: 50px 0;
   align-items: center;
 `;
+
+export const StyledImages = styled.div`
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+`;
+
+export const SlideWrapper = styled.section`
+  width: 100%;
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+  .slick-next {
+    right: -20px;
+    z-index: 900;
+  }
+  .slick-prev {
+    left: -20px;
+    z-index: 900;
+  }
+`;

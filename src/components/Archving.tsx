@@ -27,8 +27,8 @@ function Archving() {
       link: 'https://gisastudy.tistory.com/category/개발일기',
     },
     {
-      subject: 'GitHub',
-      title: '현재 운영중인 게더타운 커뮤니티',
+      subject: 'NaverCafe',
+      title: '현재 운영중인 게더타운 커뮤니티.',
       contents: ['게더타운 커뮤니티 카페', '회원수 0명에서 반 년 만에 5000명 달성'],
       src: naverImg,
       linkText: 'https://cafe.naver.com/gathertown',
@@ -51,7 +51,9 @@ function Archving() {
                     <StyledImg src={content.src} alt="" />
                     <Title>{content.subject}</Title>
                   </ImgTitleWrapper>
-                  <Link href={content.link}>{content.linkText}</Link>
+                  <Link href={content.link} target="_blank">
+                    {content.linkText}
+                  </Link>
                   <ContentTitle>{content.title}</ContentTitle>
                   <ul>
                     {content.contents.map((el) => (

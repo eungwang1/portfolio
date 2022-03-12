@@ -17,7 +17,6 @@ import styledImg from '../src_assets/styled.png';
 import tsImg from '../src_assets/ts.png';
 
 function Skills() {
-  const [small, setSmall] = useState(false);
   const FrontItem = [
     { src: htmlImg, name: 'HTML' },
     { src: cssImg, name: 'CSS' },
@@ -27,7 +26,16 @@ function Skills() {
     { src: nextImg, name: 'Next.js' },
     { src: reduxImg, name: 'Redux' },
     { src: recoilImg, name: 'Recoil' },
-    { src: styledImg, name: 'Styled Components' },
+    {
+      src: styledImg,
+      name: (
+        <div style={{ fontSize: '0.7rem', fontWeight: '700' }}>
+          Styled
+          <br />
+          Components
+        </div>
+      ),
+    },
   ];
 
   const VersionItem = [
@@ -49,17 +57,7 @@ function Skills() {
               {FrontItem.map((item) => (
                 <Item key={shortid.generate()}>
                   <StyledImg src={item.src} />
-                  <ItemName>
-                    {item.name === 'Styled Components' ? (
-                      <div style={{ fontSize: '0.7rem', fontWeight: '700' }}>
-                        Styled
-                        <br />
-                        Components
-                      </div>
-                    ) : (
-                      item.name
-                    )}
-                  </ItemName>
+                  <ItemName>{item.name}</ItemName>
                 </Item>
               ))}
             </ItemWrapper>

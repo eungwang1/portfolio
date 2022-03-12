@@ -6,3 +6,11 @@
   font-family: 'Jomhuria-Regular';
   src: url('./Jomhuria-Regular.ttf') format('ttf');
 }
+@font-face {
+  font-family: 'NotoSansKR-Bold';
+  src: url('./NotoSansKR-Bold.otf') format('otf');
+}
+@font-face {
+  font-family: 'DoHyeon-Regular';
+  src: url('./DoHyeon-Regular.ttf') format('ttf');
+}

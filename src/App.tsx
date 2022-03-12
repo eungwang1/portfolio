@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import About from './components/About';
 import Archving from './components/Archving';
 import Intro from './components/Intro';
+import Project from './components/Project';
 import Skills from './components/Skills';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Skills />
       <Archving />
+      <Project />
     </Layout>
   );
 }
