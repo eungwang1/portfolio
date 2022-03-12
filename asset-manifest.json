@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.e365c528.css",
-    "main.js": "/portfolio/static/js/main.c846422d.js",
+    "main.css": "/portfolio/static/css/main.2b5d2512.css",
+    "main.js": "/portfolio/static/js/main.33ada39c.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/NotoSansKR-Bold.otf": "/portfolio/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
     "static/media/BlackHanSans-Regular.ttf": "/portfolio/static/media/BlackHanSans-Regular.f4f89062321390018f92.ttf",
+    "static/media/DoHyeon-Regular.ttf": "/portfolio/static/media/DoHyeon-Regular.33a15385076163ccf1b8.ttf",
     "static/media/block01.png": "/portfolio/static/media/block01.88420b6bc538b80df753.png",
     "static/media/Jomhuria-Regular.ttf": "/portfolio/static/media/Jomhuria-Regular.7ba7daff8fb5b6526794.ttf",
     "index.html": "/portfolio/index.html",
-    "main.e365c528.css.map": "/portfolio/static/css/main.e365c528.css.map",
-    "main.c846422d.js.map": "/portfolio/static/js/main.c846422d.js.map",
+    "main.2b5d2512.css.map": "/portfolio/static/css/main.2b5d2512.css.map",
+    "main.33ada39c.js.map": "/portfolio/static/js/main.33ada39c.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e365c528.css",
-    "static/js/main.c846422d.js"
+    "static/css/main.2b5d2512.css",
+    "static/js/main.33ada39c.js"
   ]
 }
