@@ -38,20 +38,21 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 1440px;
+  max-width: 1250px;
   width: 100%;
   .moreviewBtn {
     text-align: center;
     cursor: pointer;
     width: 150px;
     margin: 20px auto;
-    padding: 20px 0px;
+    padding: 15px 0px;
     border-radius: 30px;
-    background-color: orange;
+    background-color: #f8b022;
     color: white;
     font-weight: 600;
+    font-size: 1rem;
     :hover {
-      background-color: #ffa500d9;
+      background-color: orange;
     }
   }
 `;

@@ -8,15 +8,16 @@ import mapImg from '../src_assets/map.png';
 import pencilImg from '../src_assets/pencil.png';
 import profileImg from '../src_assets/profile.png';
 import linkImg from '../src_assets/link.png';
+import * as C from './ComStyle';
 
 function About() {
   return (
     <AboutWrapper>
-      <Container>
-        <Title>
-          <StyledImg src={linkImg} alt="" />
+      <C.Container>
+        <C.Title>
+          <C.StyledImg src={linkImg} alt="" />
           <h1>About ME</h1>
-        </Title>
+        </C.Title>
         <GridWrapper>
           <Row justify="space-between" gutter={[16, 16]}>
             <StyledCol xl={8} md={12} xs={24}>
@@ -64,7 +65,7 @@ function About() {
             </StyledCol>
           </Row>
         </GridWrapper>
-      </Container>
+      </C.Container>
     </AboutWrapper>
   );
 }
@@ -72,7 +73,7 @@ function About() {
 export default About;
 
 const AboutWrapper = styled.div`
-  /* background-color: #f9c51d; */
+  padding-top: 15px;
 `;
 
 const GridWrapper = styled.div`
@@ -105,31 +106,4 @@ const ContentsWrapper = styled.div`
     font-weight: 550;
     width: 300px;
   }
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 1440px;
-  width: 100%;
-  margin: 30px auto;
-  align-items: center;
-`;
-
-const Title = styled.div`
-  font-family: BlackHanSans-Regular, sans-serif;
-
-  font-weight: 500;
-  h1 {
-    display: inline-block;
-    font-size: 3.4rem;
-    border-bottom: 2px solid #cccccc;
-  }
-`;
-
-const StyledImg = styled.img`
-  opacity: 0.6;
-  width: 2.5rem;
-  display: inline-block;
-  margin-right: 10px;
 `;
