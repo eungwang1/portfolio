@@ -1,3 +1,13 @@
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 510px) {
+  html {
+    font-size: 12px;
+  }
+}
+
 body {
   margin: 0;
   font-family: Noto Sans KR, sans-serif;
