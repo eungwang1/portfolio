@@ -40,7 +40,6 @@ function Skills() {
     <SkillsWrapper>
       <C.Container>
         <C.Title>
-          <C.StyledImg src={linkImg} alt="" />
           <h1>SKILLS</h1>
         </C.Title>
         <ContentsWrapper>

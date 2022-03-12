@@ -15,7 +15,6 @@ function About() {
     <AboutWrapper>
       <C.Container>
         <C.Title>
-          <C.StyledImg src={linkImg} alt="" />
           <h1>About ME</h1>
         </C.Title>
         <GridWrapper>

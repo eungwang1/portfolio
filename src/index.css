@@ -18,8 +18,3 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
-@font-face {
-  font-family: 'BlackHanSans-Regular';
-  src: url('./fonts/BlackHanSans-Regular.ttf') format('ttf');
-}

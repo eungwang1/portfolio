@@ -2,3 +2,7 @@
   font-family: 'BlackHanSans-Regular';
   src: url('./BlackHanSans-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Jomhuria-Regular';
+  src: url('./Jomhuria-Regular.ttf') format('ttf');
+}

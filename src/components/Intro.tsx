@@ -17,6 +17,7 @@ function Intro() {
             <div>About me</div>
             <div>Skills</div>
             <div>Archiving</div>
+            <div>Project</div>
           </div>
         </Header>
         <Title>
