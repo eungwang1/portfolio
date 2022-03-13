@@ -42,13 +42,24 @@ export const Container = styled.div`
 
 export const StyledImages = styled.div`
   img {
+    object-fit: fill;
     width: 100%;
-    object-fit: contain;
+    height: 470px;
+  }
+  @media screen and (max-width: 660px) {
+    height: 385px;
+  }
+  @media screen and (max-width: 550px) {
+    height: 300px;
+  }
+  @media screen and (max-width: 450px) {
+    height: 240px;
   }
 `;
 
 export const SlideWrapper = styled.section`
   width: 100%;
+
   .slick-prev:before,
   .slick-next:before {
     color: black;

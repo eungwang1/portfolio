@@ -59,6 +59,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  overflow-wrap: break-word;
   align-items: center;
   padding: 50px;
 `;
@@ -82,40 +84,63 @@ const ContentWrapper = styled.div`
   width: 100%;
 `;
 const ImgWrapper = styled.div`
-  height: 500px;
   width: 47%;
+  height: 470px;
   margin-top: 26px;
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1200px) {
     width: 80%;
+  }
+  @media screen and (max-width: 660px) {
+    height: 385px;
+  }
+  @media screen and (max-width: 550px) {
+    height: 300px;
+  }
+  @media screen and (max-width: 450px) {
+    height: 240px;
   }
 `;
 
 const ExplainWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 48%;
   margin-left: 3rem;
   margin-top: 10px;
-  @media screen and (max-width: 1050px) {
-    width: 100%;
+  @media screen and (max-width: 1200px) {
+    margin-top: 30px;
+    width: 80%;
+    margin-left: 0;
   }
 `;
 
 const Explain = styled.div`
-  font-size: 1.1rem;
-  font-weight: 550;
+  font-size: 1rem;
+  font-weight: 400;
   padding: 15px 0;
   border-bottom: 1px solid #cccccc;
+  width: 100%;
+  span {
+    font-weight: 700;
+  }
+  ul {
+    margin-top: 5px;
+    padding-left: 25px;
+    font-weight: 600;
+  }
 `;
 
 const Summary = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+  width: 100%;
 `;
 const SummaryTitle = styled.div`
-  width: 30%;
-  font-size: 1.2rem;
+  width: 33%;
+  padding-right: 1.5rem;
+  font-size: 1.1rem;
   font-family: DoHyeon-Regular, sans-serif;
   font-weight: bold;
   ::before {
@@ -123,11 +148,31 @@ const SummaryTitle = styled.div`
     color: black;
     padding-right: 10px;
   }
+  @media screen and (max-width: 1000px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 700px) {
+    width: 50%;
+  }
 `;
 
 const SummaryContent = styled.div`
-  width: 75%;
+  width: 67%;
+
   font-family: DoHyeon-Regular, sans-serif;
   font-size: 1rem;
+  overflow-wrap: break-word;
   font-weight: 550;
+  a {
+    color: #93b0db;
+    :hover {
+      color: #1890ff;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    width: 55%;
+  }
+  @media screen and (max-width: 700px) {
+    width: 50%;
+  }
 `;
