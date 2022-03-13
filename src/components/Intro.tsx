@@ -84,16 +84,21 @@ const Header = styled.div`
     margin-right: auto;
     font-weight: 700;
     font-size: 1.9rem;
+    transition-property: color;
+    transition-duration: 0.5s;
     :hover {
       color: white;
     }
   }
+
   .menu {
     display: flex;
     flex-direction: row;
     font-size: 1.3rem;
     font-weight: 600;
     div {
+      transition-property: color;
+      transition-duration: 0.5s;
       cursor: pointer;
       :hover {
         color: white;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import styled from 'styled-components';
 import About from './components/About';
@@ -12,6 +12,23 @@ function App() {
   const [skillsScroll, setSkillsScroll] = useState(false);
   const [archvingScroll, setArchvingScroll] = useState(false);
   const [projectScroll, setProjectScroll] = useState(false);
+  const [scrollToTopBtnState, setScrollToTopBtnState] = useState(false);
+
+  const scrollBtnRef = useRef<null | HTMLDivElement>(null);
+  window.addEventListener('scroll', function () {
+    if (window.scrollY >= 100) {
+      setScrollToTopBtnState(true);
+    } else {
+      setScrollToTopBtnState(false);
+    }
+  });
+  const scrollToTOP = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <Layout>
       <Intro
@@ -24,10 +41,38 @@ function App() {
       <Skills skillsScroll={skillsScroll} setSkillsScroll={setSkillsScroll} />
       <Archving archvingScroll={archvingScroll} setArchvingScroll={setArchvingScroll} />
       <Project projectScroll={projectScroll} setProjectScroll={setProjectScroll} />
+      {scrollToTopBtnState && (
+        <ScrollToTopBtn scrollToTopBtnState onClick={scrollToTOP} ref={scrollBtnRef}>
+          ▲
+        </ScrollToTopBtn>
+      )}
     </Layout>
   );
 }
 
 export default App;
 
+interface IScrollToTopBtn {
+  scrollToTopBtnState: boolean;
+}
+
 const Layout = styled.div``;
+
+const ScrollToTopBtn = styled.div<IScrollToTopBtn>`
+  position: fixed;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition-property: opacity;
+  transition-duration: 1s;
+  background-color: #ffa500;
+  bottom: 30px;
+  right: 30px;
+  z-index: 119;
+  color: white;
+  cursor: pointer;
+  :hover {
+    background-color: #f5aa20;
+  }
+  display: ${(props) => (props.scrollToTopBtnState ? 'block' : 'none')};
+  opacity: ${(props) => (props.scrollToTopBtnState ? '1' : '0')};
+`;

@@ -67,10 +67,10 @@ export const SlideWrapper = styled.section`
   }
   .slick-next {
     right: -20px;
-    z-index: 900;
+    z-index: 50;
   }
   .slick-prev {
     left: -20px;
-    z-index: 900;
+    z-index: 50;
   }
 `;

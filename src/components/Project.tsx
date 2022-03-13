@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import shortid from 'shortid';
 import styled from 'styled-components';
 import * as C from './ComStyle';
@@ -12,6 +12,13 @@ interface ProjectProps {
 
 const Project: React.FunctionComponent<ProjectProps> = ({ projectScroll, setProjectScroll }) => {
   const ProjectRef = useRef<null | HTMLDivElement>(null);
+  const [modalState, setModalState] = useState(false);
+  const [currentImgUrl, setCurrentImgUrl] = useState('');
+
+  const closeModal = () => {
+    setModalState(false);
+    document.body.style.overflow = 'unset';
+  };
   useEffect(() => {
     if (projectScroll === true) {
       ProjectRef.current?.scrollIntoView({
@@ -22,18 +29,30 @@ const Project: React.FunctionComponent<ProjectProps> = ({ projectScroll, setProj
   }, [projectScroll]);
   return (
     <ProjectWrapper ref={ProjectRef}>
+      {modalState && (
+        <ModalWrapper>
+          <Dim onClick={closeModal} />
+          <Modal>
+            <StyledImg src={currentImgUrl} alt="" />
+          </Modal>
+        </ModalWrapper>
+      )}
       <C.Container>
         <C.Title white onClick={() => setProjectScroll(true)}>
           <h1 style={{ borderBottomColor: '#cccccc' }}>PROJECTS</h1>
         </C.Title>
         <Wrapper>
-          {projects.map((project) => (
+          {projects.map((project, idx) => (
             <Container key={shortid.generate()}>
               <Ptitle>{project.ProjectName}</Ptitle>
               <Pdate>{project.date}</Pdate>
               <ContentWrapper>
                 <ImgWrapper>
-                  <SliderImages images={project.images} />
+                  <SliderImages
+                    images={project.images}
+                    setCurrentImgUrl={setCurrentImgUrl}
+                    setModalState={setModalState}
+                  />
                 </ImgWrapper>
                 <ExplainWrapper>
                   <Explain>{project.explain}</Explain>
@@ -55,6 +74,42 @@ const Project: React.FunctionComponent<ProjectProps> = ({ projectScroll, setProj
 
 export default Project;
 
+const Modal = styled.div`
+  width: 50vw;
+  height: 80vh;
+  background-color: white;
+  position: fixed;
+  z-index: 900;
+  padding: 15px;
+`;
+const ModalWrapper = styled.div`
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+`;
+
+const StyledImg = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+const Dim = styled.div`
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.2;
+`;
+
 const ProjectWrapper = styled.div`
   background-color: #1d809f;
 `;
@@ -65,6 +120,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 `;
 
 const Container = styled.div`
@@ -143,6 +199,10 @@ const Explain = styled.div`
   ul {
     margin-top: 5px;
     padding-left: 25px;
+    font-weight: 600;
+  }
+  .lessbr {
+    margin-top: 10px;
     font-weight: 600;
   }
 `;
