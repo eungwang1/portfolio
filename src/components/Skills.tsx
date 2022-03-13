@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import shortid from 'shortid';
 import styled from 'styled-components';
 import linkImg from '../src_assets/link.png';
@@ -16,7 +16,22 @@ import reduxImg from '../src_assets/redux.png';
 import styledImg from '../src_assets/styled.png';
 import tsImg from '../src_assets/ts.png';
 
-function Skills() {
+interface SkillsProps {
+  setSkillsScroll: Dispatch<SetStateAction<boolean>>;
+  skillsScroll: boolean;
+}
+
+const Skills: React.FunctionComponent<SkillsProps> = ({ skillsScroll, setSkillsScroll }) => {
+  const SkillsRef = useRef<null | HTMLDivElement>(null);
+  useEffect(() => {
+    if (skillsScroll === true) {
+      SkillsRef.current?.scrollIntoView({
+        behavior: 'smooth',
+      });
+      setSkillsScroll(false);
+    }
+  }, [skillsScroll]);
+
   const FrontItem = [
     { src: htmlImg, name: 'HTML' },
     { src: cssImg, name: 'CSS' },
@@ -45,9 +60,9 @@ function Skills() {
   ];
 
   return (
-    <SkillsWrapper>
+    <SkillsWrapper ref={SkillsRef}>
       <C.Container>
-        <C.Title>
+        <C.Title onClick={() => setSkillsScroll(true)}>
           <h1>SKILLS</h1>
         </C.Title>
         <ContentsWrapper>
@@ -79,7 +94,7 @@ function Skills() {
       </C.Container>
     </SkillsWrapper>
   );
-}
+};
 
 export default Skills;
 

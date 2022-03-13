@@ -16,6 +16,7 @@ export const StyledImg = styled.img`
 export const Title = styled.div<IWhite>`
   font-family: BlackHanSans-Regular, sans-serif;
   font-weight: 500;
+  cursor: pointer;
   h1 {
     display: inline-block;
     font-size: 3.4rem;

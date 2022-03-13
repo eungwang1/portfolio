@@ -1,6 +1,6 @@
 import { Col, Row } from 'antd';
 import shortid from 'shortid';
-import React from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import linkImg from '../src_assets/link.png';
 import * as C from './ComStyle';
@@ -8,7 +8,20 @@ import naverImg from '../src_assets/naver.png';
 import tistoryImg from '../src_assets/tistory.png';
 import githubWhiteImg from '../src_assets/githubWhite.png';
 
-function Archving() {
+interface ArchvingProps {
+  setArchvingScroll: Dispatch<SetStateAction<boolean>>;
+  archvingScroll: boolean;
+}
+const Archving: React.FunctionComponent<ArchvingProps> = ({ archvingScroll, setArchvingScroll }) => {
+  const ArchvingRef = useRef<null | HTMLDivElement>(null);
+  useEffect(() => {
+    if (archvingScroll === true) {
+      ArchvingRef.current?.scrollIntoView({
+        behavior: 'smooth',
+      });
+      setArchvingScroll(false);
+    }
+  }, [archvingScroll]);
   const ArchvingContent = [
     {
       subject: 'GitHub',
@@ -37,9 +50,9 @@ function Archving() {
   ];
 
   return (
-    <ArchvingWrapper>
+    <ArchvingWrapper ref={ArchvingRef}>
       <C.Container>
-        <C.Title white>
+        <C.Title white onClick={() => setArchvingScroll(true)}>
           <h1>ARCHIVING</h1>
         </C.Title>
         <GridWrapper>
@@ -68,7 +81,7 @@ function Archving() {
       </C.Container>
     </ArchvingWrapper>
   );
-}
+};
 
 export default Archving;
 

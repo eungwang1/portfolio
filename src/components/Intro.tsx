@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import styled from 'styled-components';
 import blockImg from '../src_assets/block01.png';
 
-function Intro() {
+interface ItroProps {
+  setAboutScroll: Dispatch<SetStateAction<boolean>>;
+  setSkillsScroll: Dispatch<SetStateAction<boolean>>;
+  setArchvingScroll: Dispatch<SetStateAction<boolean>>;
+  setProjectScroll: Dispatch<SetStateAction<boolean>>;
+}
+
+const Intro: React.FunctionComponent<ItroProps> = ({
+  setAboutScroll,
+  setSkillsScroll,
+  setArchvingScroll,
+  setProjectScroll,
+}) => {
   return (
     <IntroWrapper
       style={{
@@ -14,10 +26,10 @@ function Intro() {
         <Header>
           <div className="title">{`SEG's Portfolio`}</div>
           <div className="menu">
-            <div>About me</div>
-            <div>Skills</div>
-            <div>Archiving</div>
-            <div>Project</div>
+            <div onClick={() => setAboutScroll(true)}>About me</div>
+            <div onClick={() => setSkillsScroll(true)}>Skills</div>
+            <div onClick={() => setArchvingScroll(true)}>Archiving</div>
+            <div onClick={() => setProjectScroll(true)}>Project</div>
           </div>
         </Header>
         <Title>
@@ -27,11 +39,11 @@ function Intro() {
         <Content>
           매일매일 성장하는 <br /> 프론트엔드 개발자 심은광입니다. <br /> 끈기있는 성격과 실천력이 저의 장점입니다.
         </Content>
-        <div className="moreviewBtn">더 알아보기 ↓</div>
+        {/* <div className="moreviewBtn">더 알아보기 ↓</div> */}
       </ContentWrapper>
     </IntroWrapper>
   );
-}
+};
 
 export default Intro;
 
@@ -110,6 +122,7 @@ const Content = styled.div`
   line-height: 1.5;
   font-size: 1.1rem;
   font-weight: 510;
+  padding-bottom: 30px;
 `;
 
 const Hr = styled.div`

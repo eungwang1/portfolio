@@ -1,5 +1,5 @@
 import { Col, Row } from 'antd';
-import React from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import callImg from '../src_assets/call.png';
 import calenderImg from '../src_assets/calender.png';
@@ -10,11 +10,26 @@ import profileImg from '../src_assets/profile.png';
 import linkImg from '../src_assets/link.png';
 import * as C from './ComStyle';
 
-function About() {
+interface AboutProps {
+  setAboutScroll: Dispatch<SetStateAction<boolean>>;
+  aboutScroll: boolean;
+}
+
+const About: React.FunctionComponent<AboutProps> = ({ aboutScroll, setAboutScroll }) => {
+  const AboutRef = useRef<null | HTMLDivElement>(null);
+  useEffect(() => {
+    if (aboutScroll === true) {
+      AboutRef.current?.scrollIntoView({
+        behavior: 'smooth',
+      });
+      setAboutScroll(false);
+    }
+  }, [aboutScroll]);
+
   return (
-    <AboutWrapper>
+    <AboutWrapper ref={AboutRef}>
       <C.Container>
-        <C.Title>
+        <C.Title onClick={() => setAboutScroll(true)}>
           <h1>About ME</h1>
         </C.Title>
         <GridWrapper>
@@ -51,7 +66,7 @@ function About() {
               <img src={emailImg} alt="" />
               <ContentsWrapper>
                 <h1>이메일</h1>
-                <p>eungwang1203@gmail.com</p>
+                <a href="mailto:superman@test.com">eungwang1203@gmail.com</a>
               </ContentsWrapper>
             </StyledCol>
             <StyledCol xl={8} md={12} xs={24}>
@@ -67,7 +82,7 @@ function About() {
       </C.Container>
     </AboutWrapper>
   );
-}
+};
 
 export default About;
 
@@ -104,5 +119,9 @@ const ContentsWrapper = styled.div`
     font-size: 1rem;
     font-weight: 550;
     width: 300px;
+  }
+  a {
+    font-size: 1rem;
+    font-weight: 550;
   }
 `;

@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useRef } from 'react';
 import shortid from 'shortid';
 import styled from 'styled-components';
 import * as C from './ComStyle';
 import { projects } from '../documents/projects';
 import SliderImages from './SliderImages';
 
-function Project() {
+interface ProjectProps {
+  setProjectScroll: Dispatch<SetStateAction<boolean>>;
+  projectScroll: boolean;
+}
+
+const Project: React.FunctionComponent<ProjectProps> = ({ projectScroll, setProjectScroll }) => {
+  const ProjectRef = useRef<null | HTMLDivElement>(null);
+  useEffect(() => {
+    if (projectScroll === true) {
+      ProjectRef.current?.scrollIntoView({
+        behavior: 'smooth',
+      });
+      setProjectScroll(false);
+    }
+  }, [projectScroll]);
   return (
-    <ProjectWrapper>
+    <ProjectWrapper ref={ProjectRef}>
       <C.Container>
-        <C.Title white>
+        <C.Title white onClick={() => setProjectScroll(true)}>
           <h1 style={{ borderBottomColor: '#cccccc' }}>PROJECTS</h1>
         </C.Title>
         <Wrapper>
@@ -37,7 +51,7 @@ function Project() {
       </C.Container>
     </ProjectWrapper>
   );
-}
+};
 
 export default Project;
 
@@ -49,10 +63,12 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 `;
 
 const Container = styled.div`
+  margin-top: 2.5rem;
   width: 90%;
   background-color: white;
   border-radius: 10px;

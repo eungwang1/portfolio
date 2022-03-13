@@ -23,6 +23,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
     'linebreak-style': 0,
+
     'import/prefer-default-export': 0,
     'import/extensions': 0,
     'no-use-before-define': 0,
@@ -47,6 +48,8 @@ module.exports = {
     'react/function-component-definition': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/require-default-props': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
     'prettier/prettier': [
       'error',
       {
