@@ -6,14 +6,20 @@ import * as S from './ComStyle';
 
 interface SliderImagesProps {
   images: string[];
-  setCurrentImgUrl: Dispatch<SetStateAction<string>>;
+  setCurrentImgIndex: Dispatch<SetStateAction<number>>;
   setModalState: Dispatch<SetStateAction<boolean>>;
+  galleryIndex: number;
 }
 
-const SliderImages: React.FunctionComponent<SliderImagesProps> = ({ images, setCurrentImgUrl, setModalState }) => {
+const SliderImages: React.FunctionComponent<SliderImagesProps> = ({
+  images,
+  setCurrentImgIndex,
+  setModalState,
+  galleryIndex,
+}) => {
   const openModal = (item: string) => {
-    setCurrentImgUrl(item);
     setModalState(true);
+    setCurrentImgIndex(galleryIndex);
     document.body.style.overflow = 'hidden';
   };
   return (
@@ -24,9 +30,9 @@ const SliderImages: React.FunctionComponent<SliderImagesProps> = ({ images, setC
             <img
               src={item}
               alt=""
-              // onClick={() => {
-              //   openModal(item);
-              // }}
+              onClick={() => {
+                openModal(item);
+              }}
             />
           </div>
         </S.StyledImages>

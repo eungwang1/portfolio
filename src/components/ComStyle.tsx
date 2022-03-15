@@ -43,18 +43,10 @@ export const Container = styled.div`
 
 export const StyledImages = styled.div`
   img {
-    object-fit: fill;
+    object-fit: contain;
     width: 100%;
-    height: 470px;
-  }
-  @media screen and (max-width: 660px) {
-    height: 385px;
-  }
-  @media screen and (max-width: 550px) {
-    height: 300px;
-  }
-  @media screen and (max-width: 450px) {
-    height: 240px;
+    max-height: 470px;
+    margin: auto auto;
   }
 `;
 

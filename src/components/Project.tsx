@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import * as C from './ComStyle';
 import { projects } from '../documents/projects';
 import SliderImages from './SliderImages';
+import SliderFrame from './SliderFrame';
+import GalleryModal from './GalleryModal';
 
 interface ProjectProps {
   setProjectScroll: Dispatch<SetStateAction<boolean>>;
@@ -13,7 +15,7 @@ interface ProjectProps {
 const Project: React.FunctionComponent<ProjectProps> = ({ projectScroll, setProjectScroll }) => {
   const ProjectRef = useRef<null | HTMLDivElement>(null);
   const [modalState, setModalState] = useState(false);
-  const [currentImgUrl, setCurrentImgUrl] = useState('');
+  const [currentImgIndex, setCurrentImgIndex] = useState(-1);
 
   const closeModal = () => {
     setModalState(false);
@@ -29,42 +31,40 @@ const Project: React.FunctionComponent<ProjectProps> = ({ projectScroll, setProj
   }, [projectScroll]);
   return (
     <ProjectWrapper ref={ProjectRef}>
-      {modalState && (
-        <ModalWrapper>
-          <Dim onClick={closeModal} />
-          <Modal>
-            <StyledImg src={currentImgUrl} alt="" />
-          </Modal>
-        </ModalWrapper>
-      )}
       <C.Container>
         <C.Title white onClick={() => setProjectScroll(true)}>
           <h1 style={{ borderBottomColor: '#cccccc' }}>PROJECTS</h1>
         </C.Title>
         <Wrapper>
           {projects.map((project, idx) => (
-            <Container key={shortid.generate()}>
-              <Ptitle>{project.ProjectName}</Ptitle>
-              <Pdate>{project.date}</Pdate>
-              <ContentWrapper>
-                <ImgWrapper>
-                  <SliderImages
-                    images={project.images}
-                    setCurrentImgUrl={setCurrentImgUrl}
-                    setModalState={setModalState}
-                  />
-                </ImgWrapper>
-                <ExplainWrapper>
-                  <Explain>{project.explain}</Explain>
-                  {project.summary.map((summary) => (
-                    <Summary key={shortid.generate()}>
-                      <SummaryTitle>{summary.title}</SummaryTitle>
-                      <SummaryContent>{summary.content}</SummaryContent>
-                    </Summary>
-                  ))}
-                </ExplainWrapper>
-              </ContentWrapper>
-            </Container>
+            <>
+              {modalState && (
+                <GalleryModal currentImgIndex={currentImgIndex} setModalState={setModalState} projects={projects} />
+              )}
+              <Container key={shortid.generate()}>
+                <Ptitle>{project.ProjectName}</Ptitle>
+                <Pdate>{project.date}</Pdate>
+                <ContentWrapper>
+                  <ImgWrapper>
+                    <SliderImages
+                      images={project.images}
+                      setCurrentImgIndex={setCurrentImgIndex}
+                      setModalState={setModalState}
+                      galleryIndex={idx}
+                    />
+                  </ImgWrapper>
+                  <ExplainWrapper>
+                    <Explain>{project.explain}</Explain>
+                    {project.summary.map((summary) => (
+                      <Summary key={shortid.generate()}>
+                        <SummaryTitle>{summary.title}</SummaryTitle>
+                        <SummaryContent>{summary.content}</SummaryContent>
+                      </Summary>
+                    ))}
+                  </ExplainWrapper>
+                </ContentWrapper>
+              </Container>
+            </>
           ))}
         </Wrapper>
       </C.Container>
