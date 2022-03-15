@@ -9,6 +9,16 @@ import yorizori01 from './projectImg/yorizori01.png';
 import yorizori02 from './projectImg/yorizori02.png';
 import yorizori03 from './projectImg/yorizori03.png';
 import yorizori04 from './projectImg/yorizori04.png';
+import yorizori05 from './projectImg/yorizori05.png';
+import yorizori06 from './projectImg/yorizori06.png';
+import yorizori07 from './projectImg/yorizori07.png';
+import yorizori08 from './projectImg/yorizori08.png';
+import yorizori09 from './projectImg/yorizori09.png';
+import yorizori10 from './projectImg/yorizori10.png';
+import yorizori11 from './projectImg/yorizori11.png';
+import yorizori12 from './projectImg/yorizori12.png';
+import yorizori13 from './projectImg/yorizori13.png';
+import yorizori14 from './projectImg/yorizori14.png';
 import MetaverseStation01 from './projectImg/MetaverseStation01.png';
 import MetaverseStation02 from './projectImg/MetaverseStation02.png';
 import MetaverseStation03 from './projectImg/MetaverseStation03.png';
@@ -30,7 +40,7 @@ export const projects = [
         <div className="lessbr">팀 내에서 나의 역할 </div>
         <ul>
           <li>전체적인 프로젝트 기획</li>
-          <li>프론트엔드 전체 구현</li>
+          <li>프론트엔드 개발</li>
           <li>현재 진행중 ... </li>
         </ul>
       </div>
@@ -38,7 +48,8 @@ export const projects = [
     summary: [
       {
         title: '주요 기능',
-        content: 'OAuth로그인, 카데고리별 필터 및 정렬, 게시글 작성, 댓글 및 대댓글',
+        content:
+          'OAuth로그인, SSR, 카데고리별 필터 및 정렬, 게시글 작성, 댓글 및 대댓글, 북마크, 좋아요 , 메타버스링크 연결',
       },
       {
         title: 'GitHub',
@@ -72,8 +83,19 @@ export const projects = [
   },
   {
     ProjectName: 'Yorizori',
-    date: '2022.1 (5人 팀 프로젝트)',
-    images: [yorizori01, yorizori02, yorizori03, yorizori04],
+    date: '2022.2 (5人 팀 프로젝트)',
+    images: [
+      yorizori05,
+      yorizori06,
+      yorizori07,
+      yorizori08,
+      yorizori09,
+      yorizori10,
+      yorizori11,
+      yorizori12,
+      yorizori13,
+      yorizori14,
+    ],
     explain: (
       <div>
         <span>{`"요리" + "조리" : 요리를 조리해먹는 사람을 위한 레시피 공유 모바일 플랫폼 입니다.`}</span>
@@ -91,7 +113,8 @@ export const projects = [
     summary: [
       {
         title: '주요 기능',
-        content: '카데고리별 필터 및 정렬, 레시피 공유, 멀티타이머 기능,  ',
+        content:
+          '카데고리별 필터 및 정렬, 레시피 공유, 멀티타이머 , 로그인 , 회원가입 , 랜덤레시피, 게시글 작성, 댓글 및 대댓글  ',
       },
       {
         title: 'GitHub',
@@ -146,7 +169,7 @@ export const projects = [
     summary: [
       {
         title: '주요 기능',
-        content: '로그인, 회원가입, 게시글 작성 , 댓글기능, 좋아요기능',
+        content: '로그인, 회원가입, 게시글 작성 , 댓글, 좋아요, 메타버스링크 연결',
       },
       {
         title: 'GitHub',
