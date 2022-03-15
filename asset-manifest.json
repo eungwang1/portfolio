@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.74308f54.css",
-    "main.js": "/portfolio/static/js/main.61341079.js",
+    "main.js": "/portfolio/static/js/main.d13d8ad9.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/NotoSansKR-Bold.otf": "/portfolio/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
     "static/media/MetaverseStation01.png": "/portfolio/static/media/MetaverseStation01.118bd49e20c055e2bc6a.png",
@@ -9,17 +9,23 @@
     "static/media/MetaverseStation03.png": "/portfolio/static/media/MetaverseStation03.6be8e7f486498eba992f.png",
     "static/media/BlackHanSans-Regular.ttf": "/portfolio/static/media/BlackHanSans-Regular.f4f89062321390018f92.ttf",
     "static/media/DoHyeon-Regular.ttf": "/portfolio/static/media/DoHyeon-Regular.33a15385076163ccf1b8.ttf",
+    "static/media/yorizori08.png": "/portfolio/static/media/yorizori08.c780f1ca4feb4a75467b.png",
     "static/media/Metabook01.png": "/portfolio/static/media/Metabook01.46ddfc4e9b6071ee4ba1.png",
+    "static/media/yorizori05.png": "/portfolio/static/media/yorizori05.30a122e6b894ebff894b.png",
     "static/media/korgathershop02.gif": "/portfolio/static/media/korgathershop02.5a26e6aec71c7cfe544a.gif",
     "static/media/Metabook04.png": "/portfolio/static/media/Metabook04.84cbbae76c0c67252d2c.png",
-    "static/media/yorizori02.png": "/portfolio/static/media/yorizori02.389e75d1670e7e7da331.png",
+    "static/media/yorizori09.png": "/portfolio/static/media/yorizori09.0bac5e30fef74c2777fc.png",
     "static/media/korgathershop03.gif": "/portfolio/static/media/korgathershop03.09fd64da60b0ec6a66fe.gif",
-    "static/media/yorizori03.png": "/portfolio/static/media/yorizori03.9e2baf23deb5cd096c58.png",
-    "static/media/yorizori01.png": "/portfolio/static/media/yorizori01.424326a4e25723b5fe89.png",
+    "static/media/yorizori12.png": "/portfolio/static/media/yorizori12.2acdebc467b7c238067a.png",
+    "static/media/yorizori13.png": "/portfolio/static/media/yorizori13.8891e6481f1de88af395.png",
+    "static/media/yorizori06.png": "/portfolio/static/media/yorizori06.fb0c35454b9f458307f4.png",
+    "static/media/yorizori07.png": "/portfolio/static/media/yorizori07.6e960a076b7697deaef6.png",
+    "static/media/yorizori10.png": "/portfolio/static/media/yorizori10.57c2eae8759fe865bf69.png",
+    "static/media/yorizori14.png": "/portfolio/static/media/yorizori14.d3afa7db74b0e39d368b.png",
     "static/media/block01.png": "/portfolio/static/media/block01.88420b6bc538b80df753.png",
+    "static/media/yorizori11.png": "/portfolio/static/media/yorizori11.467d8d2e35148bef2d7d.png",
     "static/media/korgathershop01.gif": "/portfolio/static/media/korgathershop01.a51eda03b7189d0260f4.gif",
     "static/media/Jomhuria-Regular.ttf": "/portfolio/static/media/Jomhuria-Regular.7ba7daff8fb5b6526794.ttf",
-    "static/media/yorizori04.png": "/portfolio/static/media/yorizori04.7741129adf2344ddc861.png",
     "static/media/Metabook02.png": "/portfolio/static/media/Metabook02.51bcfaadbef66ede5ac4.png",
     "static/media/Metabook03.png": "/portfolio/static/media/Metabook03.40a94df33211f9367cbd.png",
     "static/media/MetaverseStation02.png": "/portfolio/static/media/MetaverseStation02.547c9697365e294c9c06.png",
@@ -29,11 +35,11 @@
     "static/media/slick.woff": "/portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/portfolio/index.html",
     "main.74308f54.css.map": "/portfolio/static/css/main.74308f54.css.map",
-    "main.61341079.js.map": "/portfolio/static/js/main.61341079.js.map",
+    "main.d13d8ad9.js.map": "/portfolio/static/js/main.d13d8ad9.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74308f54.css",
-    "static/js/main.61341079.js"
+    "static/js/main.d13d8ad9.js"
   ]
 }
