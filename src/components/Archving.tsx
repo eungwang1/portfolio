@@ -14,6 +14,9 @@ interface ArchvingProps {
 }
 const Archving: React.FunctionComponent<ArchvingProps> = ({ archvingScroll, setArchvingScroll }) => {
   const ArchvingRef = useRef<null | HTMLDivElement>(null);
+  const gotoPage = (link: string) => {
+    window.open(link);
+  };
   useEffect(() => {
     if (archvingScroll === true) {
       ArchvingRef.current?.scrollIntoView({
@@ -59,12 +62,12 @@ const Archving: React.FunctionComponent<ArchvingProps> = ({ archvingScroll, setA
           <Row justify="space-between">
             {ArchvingContent.map((content) => (
               <StyledCol xl={8} md={12} xs={24} key={shortid.generate()}>
-                <Container>
+                <Container onClick={() => gotoPage(content.link)}>
                   <ImgTitleWrapper>
                     <StyledImg src={content.src} alt="" />
                     <Title>{content.subject}</Title>
                   </ImgTitleWrapper>
-                  <Link href={content.link} target="_blank">
+                  <Link href={content.link} target="_blank" rel="noreferrer">
                     {content.linkText}
                   </Link>
                   <ContentTitle>{content.title}</ContentTitle>
@@ -117,6 +120,14 @@ const Container = styled.div`
     + li {
       margin-top: 5px;
     }
+  }
+  transition: all 0.2s linear;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.1);
+  }
+  :hover > a {
+    color: #51b0ff;
   }
 `;
 

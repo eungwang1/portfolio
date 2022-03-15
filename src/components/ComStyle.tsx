@@ -47,6 +47,7 @@ export const StyledImages = styled.div`
     width: 100%;
     max-height: 470px;
     margin: auto auto;
+    position: relative;
   }
 `;
 

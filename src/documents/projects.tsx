@@ -5,10 +5,6 @@ import Metabook01 from './projectImg/Metabook01.png';
 import Metabook02 from './projectImg/Metabook02.png';
 import Metabook03 from './projectImg/Metabook03.png';
 import Metabook04 from './projectImg/Metabook04.png';
-import yorizori01 from './projectImg/yorizori01.png';
-import yorizori02 from './projectImg/yorizori02.png';
-import yorizori03 from './projectImg/yorizori03.png';
-import yorizori04 from './projectImg/yorizori04.png';
 import yorizori05 from './projectImg/yorizori05.png';
 import yorizori06 from './projectImg/yorizori06.png';
 import yorizori07 from './projectImg/yorizori07.png';
@@ -59,14 +55,6 @@ export const projects = [
           </a>
         ),
       },
-      // {
-      //   title: 'URL',
-      //   content: (
-      //     <a href="http://13.125.179.180/" target="_blank" rel="noreferrer">
-      //       MetaBook
-      //     </a>
-      //   ),
-      // },
       {
         title: 'Frontend',
         content: 'React, Next.js, Redux, StyledComponent, AntDesign',

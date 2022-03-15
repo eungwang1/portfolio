@@ -59,7 +59,7 @@ const About: React.FunctionComponent<AboutProps> = ({ aboutScroll, setAboutScrol
               <img src={callImg} alt="" />
               <ContentsWrapper>
                 <h1>연락처</h1>
-                <p>010-8426-2693</p>
+                <p>010-xxxx-xxxx</p>
               </ContentsWrapper>
             </StyledCol>
             <StyledCol xl={8} md={12} xs={24}>
