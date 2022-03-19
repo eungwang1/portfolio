@@ -24,7 +24,12 @@ export const projects = [
   {
     ProjectName: 'MetaverseStation',
     date: '2022.3 (2人 팀 프로젝트) - 진행중',
-    images: [MetaverseStation01, MetaverseStation03, MetaverseStation04, MetaverseStation02],
+    images: [
+      { src: MetaverseStation01, text: '메인 페이지' },
+      { src: MetaverseStation03, text: '디테일 모달창' },
+      { src: MetaverseStation04, text: '마이 페이지' },
+      { src: MetaverseStation02, text: '로그인 페이지' },
+    ],
     explain: (
       <div>
         <span>METABOOK은 회원들이 서로 자신의 메타버스 공간을 공유할 수 있는 커뮤니티입니다.</span>
@@ -73,16 +78,16 @@ export const projects = [
     ProjectName: 'Yorizori',
     date: '2022.2 (5人 팀 프로젝트)',
     images: [
-      yorizori05,
-      yorizori06,
-      yorizori07,
-      yorizori08,
-      yorizori09,
-      yorizori10,
-      yorizori11,
-      yorizori12,
-      yorizori13,
-      yorizori14,
+      { src: yorizori05, text: '랜딩 페이지' },
+      { src: yorizori06, text: '게시글 작성 페이지-1,2' },
+      { src: yorizori07, text: '게시글 작성 페이지-3,4' },
+      { src: yorizori08, text: '메인 페이지, 랜덤 레시피 모달창' },
+      { src: yorizori09, text: '디테일 페이지-1' },
+      { src: yorizori10, text: '디테일 페이지-2' },
+      { src: yorizori11, text: '디테일 페이지-3, 댓글 더보기' },
+      { src: yorizori12, text: '디테일 페이지-4' },
+      { src: yorizori13, text: '마이 페이지' },
+      { src: yorizori14, text: '로그인, 회원가입' },
     ],
     explain: (
       <div>
@@ -112,14 +117,6 @@ export const projects = [
           </a>
         ),
       },
-      // {
-      //   title: 'URL',
-      //   content: (
-      //     <a href="http://13.125.179.180/" target="_blank" rel="noreferrer">
-      //       MetaBook
-      //     </a>
-      //   ),
-      // },
       {
         title: 'Frontend',
         content: 'React, Recoil, StyledComponent',
@@ -137,7 +134,12 @@ export const projects = [
   {
     ProjectName: 'MetaBook',
     date: '2022.1 (5人 팀 프로젝트)',
-    images: [Metabook01, Metabook02, Metabook03, Metabook04],
+    images: [
+      { src: Metabook01, text: '메인페이지' },
+      { src: Metabook02, text: '로그인페이지' },
+      { src: Metabook03, text: '글쓰기페이지' },
+      { src: Metabook04, text: '디테일 모달창' },
+    ],
     explain: (
       <div>
         <span>METABOOK은 회원들이 서로 자신의 메타버스 공간을 공유할 수 있는 커뮤니티입니다.</span>
@@ -192,7 +194,11 @@ export const projects = [
   {
     ProjectName: 'KorgatherShop',
     date: '2021.12 (1人 개인 프로젝트)',
-    images: [korgathershop01, korgathershop02, korgathershop03],
+    images: [
+      { src: korgathershop01, text: '맵파일 추출하기' },
+      { src: korgathershop02, text: '맵파일 적용하기' },
+      { src: korgathershop03, text: '배경음악 오브젝트 설치하기' },
+    ],
     explain: (
       <div>
         <span>게더타운에서 제공해주는 API를 가공해서, 기존 게더타운에 없는 기능들을 제공해주는 서비스입니다.</span>

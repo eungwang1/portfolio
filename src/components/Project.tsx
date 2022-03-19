@@ -157,19 +157,9 @@ const ContentWrapper = styled.div`
 `;
 const ImgWrapper = styled.div`
   width: 47%;
-  height: 470px;
   margin-top: 26px;
   @media screen and (max-width: 1200px) {
     width: 80%;
-  }
-  @media screen and (max-width: 660px) {
-    height: 385px;
-  }
-  @media screen and (max-width: 550px) {
-    height: 300px;
-  }
-  @media screen and (max-width: 450px) {
-    height: 240px;
   }
 `;
 

@@ -7,7 +7,7 @@ import large from '../src_assets/large.png';
 import * as S from './ComStyle';
 
 interface SliderImagesProps {
-  images: string[];
+  images: { src: string; text: string }[];
   setCurrentImgIndex: Dispatch<SetStateAction<number>>;
   setModalState: Dispatch<SetStateAction<boolean>>;
   galleryIndex: number;
@@ -48,7 +48,7 @@ const SliderImages: React.FunctionComponent<SliderImagesProps> = ({
             hoverState={hoverState}
             onMouseOver={() => setHoverState(true)}
             onClick={() => {
-              openModal(item);
+              openModal(item.src);
             }}
           >
             <EyeIcon src={large} alt="" />
@@ -57,10 +57,10 @@ const SliderImages: React.FunctionComponent<SliderImagesProps> = ({
             onMouseOver={() => {
               setHoverState(true);
             }}
-            src={item}
+            src={item.src}
             alt=""
             onClick={() => {
-              openModal(item);
+              openModal(item.src);
             }}
           />
         </S.StyledImages>

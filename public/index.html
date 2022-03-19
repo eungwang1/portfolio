@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kor">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -21,6 +21,15 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+      new Crate({
+          server: '954763129005432873', // Eungwang
+          channel: '954763129005432876', // #general
+          notifications : true,
+          indicator : true
+      })
+      crate.notify('무엇이든 물어보세요!')
+    </script>
     <title>SEG's Portfolio</title>
   </head>
   <body>

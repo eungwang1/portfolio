@@ -65,8 +65,8 @@ const ScrollToTopBtn = styled.div<IScrollToTopBtn>`
   transition-property: opacity;
   transition-duration: 1s;
   background-color: #ffa500;
-  bottom: 30px;
-  right: 30px;
+  bottom: 15px;
+  left: 15px;
   z-index: 119;
   color: white;
   cursor: pointer;

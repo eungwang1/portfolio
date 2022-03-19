@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react';
+import { Button } from 'antd';
 import styled from 'styled-components';
 import shortid from 'shortid';
 import SliderFrame from './SliderFrame';
@@ -8,7 +9,7 @@ interface galleryModalProps {
   projects: {
     ProjectName: string;
     date: string;
-    images: string[];
+    images: { src: string; text: string }[];
     explain: JSX.Element;
     summary: (
       | {
@@ -35,9 +36,15 @@ const GalleryModal: React.FunctionComponent<galleryModalProps> = ({ setModalStat
       <Modal>
         <SliderFrame>
           {projects[currentImgIndex].images.map((item, index) => (
-            <StyledImages key={shortid.generate()}>
-              <img src={item} alt="" />
-            </StyledImages>
+            <div key={shortid.generate()}>
+              <Text>
+                <span>{item.text}</span>
+                <StyledBtn onClick={closeModal}>x</StyledBtn>
+              </Text>
+              <StyledImages key={shortid.generate()}>
+                <img src={item.src} alt="" />
+              </StyledImages>
+            </div>
           ))}
         </SliderFrame>
       </Modal>
@@ -46,6 +53,19 @@ const GalleryModal: React.FunctionComponent<galleryModalProps> = ({ setModalStat
 };
 
 export default GalleryModal;
+
+const StyledBtn = styled(Button)`
+  margin-left: auto;
+  z-index: 999;
+`;
+const Text = styled.div`
+  border-bottom: 2px double #686868;
+  padding: 10px 10px 5px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  color: black;
+`;
 
 const Dim = styled.div`
   z-index: 500;
@@ -75,9 +95,9 @@ const Modal = styled.div`
   background-color: white;
   position: fixed;
   z-index: 900;
-  padding: 20px;
+  padding: 0 20px 0px 20px;
   max-width: 960px;
-  max-height: 800px;
+  max-height: 850px;
   .slick-prev:before,
   .slick-next:before {
     color: black;
@@ -93,12 +113,14 @@ const Modal = styled.div`
 `;
 
 const StyledImages = styled.div`
+  margin: 0 auto;
   img {
-    margin: auto auto;
     object-fit: contain;
-    height: 65vw;
     width: 100%;
     max-width: 920px;
     max-height: 728px;
+  }
+  @media screen and (max-width: 1200px) {
+    width: 90%;
   }
 `;
