@@ -13,11 +13,10 @@ body {
   font-family: Noto Sans KR, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-html,
-body {
   width: 100%;
+  overflow-x: hidden;
 }
+
 a {
   color: #93b0db;
 }

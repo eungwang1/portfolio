@@ -19,6 +19,9 @@ import MetaverseStation01 from './projectImg/MetaverseStation01.png';
 import MetaverseStation02 from './projectImg/MetaverseStation02.png';
 import MetaverseStation03 from './projectImg/MetaverseStation03.png';
 import MetaverseStation04 from './projectImg/MetaverseStation04.png';
+import SimShop01 from './projectImg/SimShop01.png';
+import SimShop02 from './projectImg/SimShop02.png';
+import SimShop03 from './projectImg/SimShop03.png';
 
 export const projects = [
   {
@@ -62,7 +65,7 @@ export const projects = [
       },
       {
         title: 'Frontend',
-        content: 'React, Next.js, Redux, StyledComponent, AntDesign',
+        content: 'TypeScript, React, Next.js, Redux, StyledComponent, AntDesign',
       },
       {
         title: 'Backend',
@@ -71,6 +74,62 @@ export const projects = [
       {
         title: 'Deployment',
         content: 'AWS S3, AGINX, Docker',
+      },
+    ],
+  },
+  {
+    ProjectName: `Sim's SaleShop`,
+    date: '2022.3 ~ ing (개인 프로젝트)',
+    images: [
+      { src: SimShop01, text: '메인 페이지' },
+      { src: SimShop02, text: '디테일 페이지-1' },
+      { src: SimShop03, text: '디테일 페이지-2' },
+    ],
+    explain: (
+      <div>
+        <span>{`Sim's SaleShop은 쿠팡파트너스 활동을 위해 만든 웹사이트입니다.`}</span>
+        <p>쿠팡에서 쿠팡파트너스 회원에게 제공해주는 API를 통해, 상품별 인기순위를 받아와서 이용하고 있습니다.</p>
+        <div className="lessbr">- 메인페이지 </div>
+        <ul>
+          <li>웹사이트에 등록 되어있는 모든 상품항목을 보여줍니다.</li>
+          <li>검색어자동완성 기능을 통해, 어떤 상품이 있는지 쉽게 조회할 수 있습니다.</li>
+        </ul>
+        <div className="lessbr">- 디테일페이지 </div>
+        <ul>
+          <li>상품별 인기아이템 상위 10개를 보여줍니다.</li>
+          <li>카카오톡공유하기 기능을 통해, 상품정보를 공유할 수 있습니다.</li>
+        </ul>
+        <br />
+      </div>
+    ),
+    summary: [
+      {
+        title: '주요 기능',
+        content: '검색어 자동완성, 카카오톡 공유하기',
+      },
+      {
+        title: 'GitHub',
+        content: (
+          <a href="https://github.com/eungwang1/CoupangPartnersWeb" target="_blank" rel="noreferrer">
+            {`Sim's SaleShop-Repo`}
+          </a>
+        ),
+      },
+      {
+        title: 'URL',
+        content: (
+          <a href="https://gwang.xyz/" target="_blank" rel="noreferrer">
+            {`Sim's SaleShop`}
+          </a>
+        ),
+      },
+      {
+        title: 'Frontend',
+        content: 'Typescript, React, Next.js, Recoil, StyledComponent, AntDesign',
+      },
+      {
+        title: 'Deployment',
+        content: 'vercel',
       },
     ],
   },
@@ -117,6 +176,7 @@ export const projects = [
           </a>
         ),
       },
+
       {
         title: 'Frontend',
         content: 'React, Recoil, StyledComponent',
