@@ -73,7 +73,7 @@ export const projects = [
       },
       {
         title: 'Deployment',
-        content: 'AWS S3, AGINX, Docker',
+        content: 'AWS S3, vercel',
       },
     ],
   },
