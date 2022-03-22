@@ -25,6 +25,74 @@ import SimShop03 from './projectImg/SimShop03.png';
 
 export const projects = [
   {
+    ProjectName: 'My portfolio',
+    date: '2022.3 (1人 개인 프로젝트)',
+    images: [
+      {
+        src: 'https://user-images.githubusercontent.com/86244477/159426788-a2b7921a-6e61-4fab-977b-852b8dac8ed5.png',
+        text: 'ABOUTME',
+      },
+      {
+        src: 'https://user-images.githubusercontent.com/86244477/159426967-9324f00b-fc7d-46dc-9f35-6a0eef3b8aab.png',
+        text: 'SKILLS',
+      },
+      {
+        src: 'https://user-images.githubusercontent.com/86244477/159427013-7c3ac830-8a3f-4ed4-9f0e-db67ba2b8edc.png',
+        text: 'ARCHIVING',
+      },
+      {
+        src: 'https://user-images.githubusercontent.com/86244477/159427086-50c5228d-e6d3-4911-bbff-15aef5c86cb2.png',
+        text: 'PROJECTS',
+      },
+      {
+        src: 'https://user-images.githubusercontent.com/86244477/159427162-cd1248a3-c440-4d97-a166-2a71ad167c76.png',
+        text: 'PROJECT - Modal',
+      },
+    ],
+    explain: (
+      <div>
+        <span>프론트엔드 신입 개발자에 지원하기 위해 만든 포트폴리오 웹사이트 입니다.</span>
+        <div className="lessbr">포트폴리오 개요</div>
+        <ul>
+          <li>ABOUT ME - 간단한 자기소개 및 인적사항</li>
+          <li>SKILLS - 기술 스택 </li>
+          <li>ARCHIVING - GITHUB, BLOG 및 CAFE 링크</li>
+          <li>PROJECTS - 프로젝트 경험</li>
+        </ul>
+      </div>
+    ),
+    summary: [
+      {
+        title: '주요 기능',
+        content: '간단한 자기소개, 기술스택, GITHUB, BLOG 및 CAFE 링크, 프로젝트 경험',
+      },
+      {
+        title: 'GitHub',
+        content: (
+          <a href="https://github.com/eungwang1/portfolio" target="_blank" rel="noreferrer">
+            portfolio-Repo
+          </a>
+        ),
+      },
+      {
+        title: 'URL',
+        content: (
+          <a href="https://eungwang1.github.io/portfolio/" target="_blank" rel="noreferrer">
+            {`SEG's Portfolio`}
+          </a>
+        ),
+      },
+      {
+        title: 'Frontend',
+        content: 'TypeScript, React, StyledComponent, AntDesign',
+      },
+      {
+        title: 'Deployment',
+        content: 'GithubPage',
+      },
+    ],
+  },
+  {
     ProjectName: 'MetaverseStation',
     date: '2022.3 (2人 팀 프로젝트) - 진행중',
     images: [
@@ -53,7 +121,7 @@ export const projects = [
       {
         title: '주요 기능',
         content:
-          'OAuth로그인, SSR, 카데고리별 필터 및 정렬, 게시글 작성, 댓글 및 대댓글, 북마크, 좋아요 , 메타버스링크 연결',
+          'OAuth로그인, SSR, 카데고리별 필터 및 정렬, 게시글 작성, 댓글 및 대댓글, 북마크, 좋아요 , 메타버스링크 연결 -- ( 구현 예정 )',
       },
       {
         title: 'GitHub',
@@ -63,6 +131,7 @@ export const projects = [
           </a>
         ),
       },
+
       {
         title: 'Frontend',
         content: 'TypeScript, React, Next.js, Redux, StyledComponent, AntDesign',
@@ -73,7 +142,7 @@ export const projects = [
       },
       {
         title: 'Deployment',
-        content: 'AWS S3, vercel',
+        content: 'AWS, vercel',
       },
     ],
   },
