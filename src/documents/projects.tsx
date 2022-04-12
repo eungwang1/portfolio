@@ -25,6 +25,73 @@ import SimShop03 from './projectImg/SimShop03.png';
 
 export const projects = [
   {
+    ProjectName: '모두의 메타버스',
+    date: '2022.3 (2人 팀 프로젝트) - 진행중',
+    images: [
+      { src: MetaverseStation01, text: '메인 페이지' },
+      { src: MetaverseStation03, text: '디테일 모달창' },
+      { src: MetaverseStation04, text: '마이 페이지' },
+      { src: MetaverseStation02, text: '로그인 페이지' },
+    ],
+    explain: (
+      <div>
+        <span>METABOOK은 회원들이 서로 자신의 메타버스 공간을 공유할 수 있는 커뮤니티입니다.</span>
+        <br />
+        메타버스 서비스가 발전해감에 따라, 누구나 손쉽게 자신만의 메타버스 공간을 만들 수 있게 되었습니다. 모두의
+        메타버스는 자신이 만든 메타버스 공간을 자랑하고, 다른 사람의 메타버스 공간을 탐험할 수 있는 서비스를 제공하고자
+        기획되었습니다.
+        <br />
+        <div className="lessbr">팀 내에서 나의 역할 </div>
+        <ul>
+          <li>전체적인 프로젝트 기획</li>
+          <li>프론트엔드 개발</li>
+          <li>현재 진행중 ... </li>
+        </ul>
+      </div>
+    ),
+    summary: [
+      {
+        title: '주요 기능',
+        content:
+          'OAuth로그인, SSR, 카데고리별 필터 및 정렬, 게시글 작성, 댓글 및 대댓글, 북마크, 좋아요 , 메타버스링크 연결',
+      },
+      {
+        title: 'GitHub',
+        content: (
+          <>
+            <a href="https://github.com/eungwang1/ModuMeta" target="_blank" rel="noreferrer">
+              ModuMeta - front
+            </a>
+            <br />
+            <a href="https://github.com/Korgather/MetaverseStation_Back" target="_blank" rel="noreferrer">
+              ModuMeta - back
+            </a>
+          </>
+        ),
+      },
+      {
+        title: 'URL',
+        content: (
+          <a href="https://www.modumeta.com/" target="_blank" rel="noreferrer">
+            ModuMeta
+          </a>
+        ),
+      },
+      {
+        title: 'Frontend',
+        content: 'TypeScript, React, Next.js, Redux, StyledComponent, AntDesign',
+      },
+      {
+        title: 'Backend',
+        content: 'Spring, MariaDB',
+      },
+      {
+        title: 'Deployment',
+        content: 'AWS, vercel',
+      },
+    ],
+  },
+  {
     ProjectName: 'My portfolio',
     date: '2022.3 (1人 개인 프로젝트)',
     images: [
@@ -89,60 +156,6 @@ export const projects = [
       {
         title: 'Deployment',
         content: 'GithubPage',
-      },
-    ],
-  },
-  {
-    ProjectName: 'MetaverseStation',
-    date: '2022.3 (2人 팀 프로젝트) - 진행중',
-    images: [
-      { src: MetaverseStation01, text: '메인 페이지' },
-      { src: MetaverseStation03, text: '디테일 모달창' },
-      { src: MetaverseStation04, text: '마이 페이지' },
-      { src: MetaverseStation02, text: '로그인 페이지' },
-    ],
-    explain: (
-      <div>
-        <span>METABOOK은 회원들이 서로 자신의 메타버스 공간을 공유할 수 있는 커뮤니티입니다.</span>
-        <br />
-        메타버스 서비스가 발전해감에 따라, 누구나 손쉽게 자신만의 메타버스 공간을 만들 수 있게 되었습니다. METABOOK은
-        자신이 만든 메타버스 공간을 자랑하고, 다른 사람의 메타버스 공간을 탐험할 수 있는 서비스를 제공하고자
-        기획되었습니다.
-        <br />
-        <div className="lessbr">팀 내에서 나의 역할 </div>
-        <ul>
-          <li>전체적인 프로젝트 기획</li>
-          <li>프론트엔드 개발</li>
-          <li>현재 진행중 ... </li>
-        </ul>
-      </div>
-    ),
-    summary: [
-      {
-        title: '주요 기능',
-        content:
-          'OAuth로그인, SSR, 카데고리별 필터 및 정렬, 게시글 작성, 댓글 및 대댓글, 북마크, 좋아요 , 메타버스링크 연결 -- ( 구현 예정 )',
-      },
-      {
-        title: 'GitHub',
-        content: (
-          <a href="https://github.com/eungwang1/MetaverseStation" target="_blank" rel="noreferrer">
-            MetaverseStation-Repo
-          </a>
-        ),
-      },
-
-      {
-        title: 'Frontend',
-        content: 'TypeScript, React, Next.js, Redux, StyledComponent, AntDesign',
-      },
-      {
-        title: 'Backend',
-        content: 'Spring, MySql',
-      },
-      {
-        title: 'Deployment',
-        content: 'AWS, vercel',
       },
     ],
   },
