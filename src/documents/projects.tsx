@@ -270,7 +270,7 @@ export const projects = [
       },
       {
         title: 'Deployment',
-        content: 'AWS S3, ANGINX',
+        content: 'AWS, ANGINX',
       },
     ],
   },
@@ -330,7 +330,7 @@ export const projects = [
       },
       {
         title: 'Deployment',
-        content: 'AWS S3, ANGINX',
+        content: 'AWS, ANGINX',
       },
     ],
   },
