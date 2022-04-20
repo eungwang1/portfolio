@@ -31,21 +31,23 @@ function App() {
 
   return (
     <Layout>
-      <Intro
-        setAboutScroll={setAboutScroll}
-        setSkillsScroll={setSkillsScroll}
-        setArchvingScroll={setArchvingScroll}
-        setProjectScroll={setProjectScroll}
-      />
-      <About aboutScroll={aboutScroll} setAboutScroll={setAboutScroll} />
-      <Skills skillsScroll={skillsScroll} setSkillsScroll={setSkillsScroll} />
-      <Archving archvingScroll={archvingScroll} setArchvingScroll={setArchvingScroll} />
-      <Project projectScroll={projectScroll} setProjectScroll={setProjectScroll} />
-      {scrollToTopBtnState && (
-        <ScrollToTopBtn scrollToTopBtnState onClick={scrollToTOP} ref={scrollBtnRef}>
-          ▲
-        </ScrollToTopBtn>
-      )}
+      <Inner>
+        <Intro
+          setAboutScroll={setAboutScroll}
+          setSkillsScroll={setSkillsScroll}
+          setArchvingScroll={setArchvingScroll}
+          setProjectScroll={setProjectScroll}
+        />
+        <About aboutScroll={aboutScroll} setAboutScroll={setAboutScroll} />
+        <Skills skillsScroll={skillsScroll} setSkillsScroll={setSkillsScroll} />
+        <Archving archvingScroll={archvingScroll} setArchvingScroll={setArchvingScroll} />
+        <Project projectScroll={projectScroll} setProjectScroll={setProjectScroll} />
+        {scrollToTopBtnState && (
+          <ScrollToTopBtn scrollToTopBtnState onClick={scrollToTOP} ref={scrollBtnRef}>
+            ▲
+          </ScrollToTopBtn>
+        )}
+      </Inner>
     </Layout>
   );
 }
@@ -55,8 +57,15 @@ export default App;
 interface IScrollToTopBtn {
   scrollToTopBtnState: boolean;
 }
-
-const Layout = styled.div``;
+const Inner = styled.div`
+  width: 100vw;
+`;
+const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 const ScrollToTopBtn = styled.div<IScrollToTopBtn>`
   position: fixed;

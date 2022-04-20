@@ -59,7 +59,7 @@ const About: React.FunctionComponent<AboutProps> = ({ aboutScroll, setAboutScrol
               <img src={callImg} alt="" />
               <ContentsWrapper>
                 <h1>연락처</h1>
-                <p>010-xxxx-xxxx</p>
+                <p>010-8426-2693</p>
               </ContentsWrapper>
             </StyledCol>
             <StyledCol xl={8} md={12} xs={24}>
@@ -110,7 +110,7 @@ const StyledCol = styled(Col)`
 const ContentsWrapper = styled.div`
   display: inline-block;
   margin-left: 30px;
-  width: 10rem;
+  width: 11rem;
   h1 {
     font-size: 1.2rem;
     font-weight: 600;
@@ -118,7 +118,6 @@ const ContentsWrapper = styled.div`
   p {
     font-size: 1rem;
     font-weight: 550;
-    width: 300px;
   }
   a {
     font-size: 1rem;

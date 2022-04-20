@@ -42,14 +42,14 @@ const Archving: React.FunctionComponent<ArchvingProps> = ({ archvingScroll, setA
       linkText: 'https://gisastudy.tistory.com/',
       link: 'https://gisastudy.tistory.com/category/개발일기',
     },
-    {
-      subject: 'NaverCafe',
-      title: '현재 운영중인 게더타운 커뮤니티.',
-      contents: ['게더타운 커뮤니티 카페', '회원수 0명에서 반 년 만에 5000명 달성'],
-      src: naverImg,
-      linkText: 'https://cafe.naver.com/gathertown',
-      link: 'https://cafe.naver.com/gathertown',
-    },
+    // {
+    //   subject: 'NaverCafe',
+    //   title: '현재 운영중인 게더타운 커뮤니티.',
+    //   contents: ['게더타운 커뮤니티 카페', '회원수 0명에서 반 년 만에 5000명 달성'],
+    //   src: naverImg,
+    //   linkText: 'https://cafe.naver.com/gathertown',
+    //   link: 'https://cafe.naver.com/gathertown',
+    // },
   ];
 
   return (
@@ -59,7 +59,7 @@ const Archving: React.FunctionComponent<ArchvingProps> = ({ archvingScroll, setA
           <h1>ARCHIVING</h1>
         </C.Title>
         <GridWrapper>
-          <Row justify="space-between">
+          <Row justify="center" style={{ width: '100%' }}>
             {ArchvingContent.map((content) => (
               <StyledCol xl={8} md={12} xs={24} key={shortid.generate()}>
                 <Container onClick={() => gotoPage(content.link)}>
@@ -90,6 +90,7 @@ export default Archving;
 
 const ArchvingWrapper = styled.div`
   background-color: #222222;
+  width: 100%;
 `;
 
 const GridWrapper = styled.div`
@@ -100,15 +101,25 @@ const StyledCol = styled(Col)`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  + div {
+    margin-left: 30px;
+  }
+  @media screen and (max-width: 1200px) {
+    + div {
+      margin-left: 0px;
+    }
+  }
 `;
 
 const Container = styled.div`
   margin-top: 30px;
   background-color: white;
-  width: 80%;
+  width: 85%;
   height: 310px;
   padding: 30px;
   border-radius: 15px;
+
   ul {
     padding-left: 20px;
 

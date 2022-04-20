@@ -17,10 +17,6 @@ const Project: React.FunctionComponent<ProjectProps> = ({ projectScroll, setProj
   const [modalState, setModalState] = useState(false);
   const [currentImgIndex, setCurrentImgIndex] = useState(-1);
 
-  const closeModal = () => {
-    setModalState(false);
-    document.body.style.overflow = 'unset';
-  };
   useEffect(() => {
     if (projectScroll === true) {
       ProjectRef.current?.scrollIntoView({
@@ -46,12 +42,7 @@ const Project: React.FunctionComponent<ProjectProps> = ({ projectScroll, setProj
                 <Pdate>{project.date}</Pdate>
                 <ContentWrapper>
                   <ImgWrapper>
-                    <SliderImages
-                      images={project.images}
-                      setCurrentImgIndex={setCurrentImgIndex}
-                      setModalState={setModalState}
-                      galleryIndex={idx}
-                    />
+                    <SliderImages images={project.images} />
                   </ImgWrapper>
                   <ExplainWrapper>
                     <Explain>{project.explain}</Explain>
@@ -74,53 +65,20 @@ const Project: React.FunctionComponent<ProjectProps> = ({ projectScroll, setProj
 
 export default Project;
 
-const Modal = styled.div`
-  width: 50vw;
-  height: 80vh;
-  background-color: white;
-  position: fixed;
-  z-index: 900;
-  padding: 15px;
-`;
-const ModalWrapper = styled.div`
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 300;
-`;
-
-const StyledImg = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-
-const Dim = styled.div`
-  z-index: 500;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.2;
-`;
-
 const ProjectWrapper = styled.div`
   background-color: #1d809f;
 `;
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Container = styled.div`
@@ -134,7 +92,7 @@ const Container = styled.div`
 
   overflow-wrap: break-word;
   align-items: center;
-  padding: 50px;
+  padding: 50px 20px;
 `;
 
 const Ptitle = styled.div`
@@ -150,13 +108,13 @@ const Pdate = styled.div`
 const ContentWrapper = styled.div`
   margin-top: 30px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
 `;
 const ImgWrapper = styled.div`
-  width: 47%;
+  width: 80%;
   margin-top: 26px;
   @media screen and (max-width: 1200px) {
     width: 80%;
@@ -167,24 +125,21 @@ const ExplainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 48%;
+  width: 80%;
   margin-left: 3rem;
-  margin-top: 10px;
-  @media screen and (max-width: 1200px) {
-    margin-top: 30px;
-    width: 80%;
-    margin-left: 0;
-  }
+  margin-top: 30px;
 `;
 
-const Explain = styled.div`
-  font-size: 1rem;
+const Explain = styled.p`
+  font-size: 1.1rem;
   font-weight: 400;
   padding: 15px 0;
   border-bottom: 1px solid #cccccc;
   width: 100%;
   span {
     font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
   }
   ul {
     margin-top: 5px;

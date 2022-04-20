@@ -42,12 +42,16 @@ export const Container = styled.div`
 `;
 
 export const StyledImages = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .ant-image {
+    margin: 0 auto;
+  }
   img {
     object-fit: contain;
-    width: 100%;
     max-height: 470px;
-    margin: auto auto;
-    position: relative;
   }
 `;
 

@@ -82,6 +82,7 @@ const Header = styled.div`
   .title {
     cursor: pointer;
     margin-right: auto;
+    margin-left: 30px;
     font-weight: 700;
     font-size: 1.9rem;
     transition-property: color;
